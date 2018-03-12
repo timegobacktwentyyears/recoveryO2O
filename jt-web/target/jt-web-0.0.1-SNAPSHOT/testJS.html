@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>测试JSON跨域问题</title>	
+	<script type="text/javascript">
+		/*manage.jt.com/test.json?callback=test  */
+				
+		/*后端程序   {....JSON串} ~~~~~~~~test({....JSON串}) */
+		/*当前方法暂时没有人去触发  将该方法模拟为远程js的方法*/
+		function 1707(data){
+			alert("调用开始")
+			alert(data.name);
+		}
+		
+	</script>
+	<script type="text/javascript" src="http://manage.jt.com/test.json"></script>
+	<script type="text/javascript" src="http://manage.jt.com/js/jquery-easyui-1.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<h1>JS跨域问题</h1>
+	
+</script>
+</body>
+
+
+</html>

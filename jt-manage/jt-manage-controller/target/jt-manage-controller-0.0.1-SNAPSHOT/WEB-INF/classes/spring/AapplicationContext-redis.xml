@@ -1,0 +1,47 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+
+	<!-- 构建连接池配置信息 -->
+	<bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+		<!-- 最大连接数 -->
+		<property name="maxTotal" value="${redis.maxTotal}" />
+	</bean>
+
+	<bean id="jedisShardInfo1" class="redis.clients.jedis.JedisShardInfo">
+		<constructor-arg index="0" value="${redis.node1.ip}" />
+		<constructor-arg index="1" value="${redis.node1.port}"
+			type="int" />
+	</bean>
+
+	<bean id="jedisShardInfo2" class="redis.clients.jedis.JedisShardInfo">
+		<constructor-arg index="0" value="${redis.node2.ip}" />
+		<constructor-arg index="1" value="${redis.node2.port}"
+			type="int" />
+	</bean>
+
+	<bean id="jedisShardInfo3" class="redis.clients.jedis.JedisShardInfo">
+		<constructor-arg index="0" value="${redis.node3.ip}" />
+		<constructor-arg index="1" value="${redis.node3.port}"
+			type="int" />
+	</bean>
+
+	<!-- 定义集群连接池 -->
+	<bean id="shardedJedisPool" class="redis.clients.jedis.ShardedJedisPool"
+		destroy-method="close">
+		<constructor-arg index="0" ref="jedisPoolConfig" />
+		<constructor-arg index="1">
+			<list>
+				<ref bean="jedisShardInfo1" />
+				<ref bean="jedisShardInfo2" />
+				<ref bean="jedisShardInfo3" />
+			</list>
+		</constructor-arg>
+	</bean>
+
+</beans>

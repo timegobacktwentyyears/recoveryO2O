@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jt.order.mapper.OrderMapper">
+	
+	<insert id="saveOrder">
+		insert into tb_order(order_id,payment,payment_type,post_fee,status,payment_time,consign_time,end_time,close_time,shipping_name,shipping_code,user_id,buyer_message,buyer_nick,buyer_rate,create_time,update_time) 
+		values(#{orderId},#{payment},#{paymentType},#{postFee},#{status},#{paymentTime},#{consignTime},#{endTime},#{closeTime},#{shippingName},#{shippingCode},#{userId},#{buyerMessage},#{buyerNick},#{buyerRate},#{createTime},#{updateTime});
+		
+		insert into tb_order_shipping(order_id,receiver_name,receiver_phone,receiver_mobile,receiver_state,receiver_city,receiver_district,receiver_address,receiver_zip,created,updated) 
+		values(#{orderId},#{orderShipping.receiverName},#{orderShipping.receiverPhone},#{orderShipping.receiverMobile},#{orderShipping.receiverState},
+		#{orderShipping.receiverCity},#{orderShipping.receiverDistrict},#{orderShipping.receiverAddress},#{orderShipping.receiverZip},#{orderShipping.created},#{orderShipping.updated});
+		
+		insert into tb_order_item (item_id,order_id,num,title,price,total_fee,pic_path) values
+		<foreach collection="orderItems" open="(" close=")" separator="," item="item">
+			#{item.itemId},#{item.orderId},#{item.num},#{item.title},#{item.price},#{item.totalFee},#{item.picPath}
+		</foreach>
+	</insert>
+	
+	<!-- 根据orderId查询订单 -->
+	<select id="findOrderById" resultMap="orderRM">
+			select * from tb_order where order_id=#{orderId}
+	</select>
+	
+	<resultMap type="Order" id="orderRM">
+		<id  property="orderId" column="order_id" />
+		<!-- 定义一对一关联关系 column表示主键信息   select 表示关联子查询 -->
+		<association property="orderShipping" javaType="OrderShipping" column="order_id" select="findOrderShipping"/>
+
+		<!-- 表示一对多关联关系 column表示主键信息     select 表示关联子查询,一对多 用ofType -->
+		<collection property="orderItems" ofType="OrderItem" column="orderId" select="findOrderItems"></collection>
+	</resultMap>
+	
+	<select id="findOrderShipping" resultType="OrderShipping">
+		select * from tb_order_shipping where order_id=#{orderId}
+	</select>
+	<select id="findOrderItems" resultType="OrderItem">
+		select * from tb_order_item where order_id=#{orderId}
+	</select>
+
+
+
+
+
+
+</mapper>
