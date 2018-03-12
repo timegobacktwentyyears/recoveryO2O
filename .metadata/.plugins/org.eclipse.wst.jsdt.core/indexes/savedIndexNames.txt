@@ -1,0 +1,7 @@
+INDEX VERSION 1.3+C:\Users\acer\workspace\18Workspace\recoveryO2O\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3099189244.index
+666728826.index
+545848036.index
+1119719611.index
+3327529033.index
+458914892.index
