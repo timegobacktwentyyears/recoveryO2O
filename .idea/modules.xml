@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/recover-parent/recover-parent.iml" filepath="$PROJECT_DIR$/recover-parent/recover-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/recoveryO2O.iml" filepath="$PROJECT_DIR$/.idea/recoveryO2O.iml" />
+      <module fileurl="file://$PROJECT_DIR$/second-recover/second-recover.iml" filepath="$PROJECT_DIR$/second-recover/second-recover.iml" />
     </modules>
   </component>
 </project>

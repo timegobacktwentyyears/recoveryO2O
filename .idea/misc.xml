@@ -4,6 +4,8 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/service/pom.xml" />
+        <option value="$PROJECT_DIR$/recover-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/second-recover/pom.xml" />
       </list>
     </option>
   </component>
