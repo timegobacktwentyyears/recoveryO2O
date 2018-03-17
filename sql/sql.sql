@@ -43,10 +43,8 @@ CREATE TABLE `role` (
 PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='角色表';
 
-DROP TABLE IF EXISTS `orders`;
-
-CREATE TABLE `orders` (
-
+DROP TABLE IF EXISTS `order`;
+CREATE TABLE `order` (
 `id` int(11) NOT NULL AUTO_INCREMENT,
 `user_id`  int(11) NOT NULL COMMENT '用户id',
 `order_desc` varchar(256) NOT NULL COMMENT '订单信息',
@@ -58,6 +56,20 @@ CREATE TABLE `orders` (
 `is_deleted` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0正常 1逻辑删除',
 PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='订单表';
+
+DROP TABLE IF EXISTS `order_grade`;
+CREATE TABLE `order_grade` (
+`id` int(11) NOT NULL AUTO_INCREMENT,
+`order_id`  int(11) NOT NULL COMMENT '订单id',
+`order_grade` tinyint(1) NOT NULL COMMENT '订单评分  1-5',
+`user_grade` tinyint(1) NOT NULL COMMENT '对回收员的评分  1-5',
+`user_review` varchar(256) COMMENT '用户评价 1000111001110000，  详见userReview类 ',
+`review_text` varchar(256) COMMENT '用户手打的评价',
+`gmt_create` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP  COMMENT '新增时间',
+`gmt_modified` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP  COMMENT '修改时间',
+`is_deleted` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0正常 1逻辑删除',
+PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='订单评价表';
 
 DROP TABLE IF EXISTS ` sort`;
 CREATE TABLE `sort` (

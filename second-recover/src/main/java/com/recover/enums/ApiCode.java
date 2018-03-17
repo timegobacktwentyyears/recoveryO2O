@@ -1,4 +1,4 @@
-package com.recover;
+package com.recover.enums;
 
 public enum ApiCode {
     SUCCESS(1),FAIL(-1),UN_SIGN(0);

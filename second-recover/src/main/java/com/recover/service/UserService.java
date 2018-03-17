@@ -1,6 +1,6 @@
 package com.recover.service;
 
-import com.recover.ApiCode;
+import com.recover.enums.ApiCode;
 import com.recover.dao.UserDao;
 import com.recover.entity.User;
 import com.recover.exception.MineException;
