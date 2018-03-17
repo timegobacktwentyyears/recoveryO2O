@@ -28,7 +28,6 @@ CREATE TABLE `area` (
 `is_deleted` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0正常 1逻辑删除',
 PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='地址表';
-
 DROP TABLE IF EXISTS `role`;
 CREATE TABLE `role` (
 
