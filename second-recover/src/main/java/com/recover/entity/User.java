@@ -5,6 +5,8 @@ package com.recover.entity;
  */
 public class User extends BaseEntity{
     private String userName;
+
+    private String userPassword;
     /**
      * 用户简介
      */
@@ -18,9 +20,25 @@ public class User extends BaseEntity{
      */
     private Integer userArea;
     /**
+     * 详细地址
+     */
+    private String fullAddress;
+    /**
+     * 电话
+     */
+    private Long phone;
+    /**
      * '用户状态0：正常，1：禁用'
      */
     private Integer status;
+
+    public Long getPhone() {
+        return phone;
+    }
+
+    public void setPhone(Long phone) {
+        this.phone = phone;
+    }
 
     public String getUserName() {
         return userName;
@@ -60,5 +78,13 @@ public class User extends BaseEntity{
 
     public void setStatus(Integer status) {
         this.status = status;
+    }
+
+    public String getUserPassword() {
+        return userPassword;
+    }
+
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
     }
 }

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.recover.dao.UserDao">
+   <select id="getByuserNameAndPasswordType" resultType="User">
+       SELECT *
+       FROM user
+       where user_name = #{userName}
+       and user_password = #{password}
+       <if test="type != null">
+           user_type = #{type}
+       </if>
+       and status = 0 and is_deleted = 0
+   </select>
+
+    <select id="getByName" resultType="User">
+        SELECT * from user where user_name = #{name} and status = 0 and is_deleted = 0
+    </select>
+
+    <insert id="insert" parameterType="User" useGeneratedKeys="true" keyProperty="id">
+        insert into user
+        (user_name,user_password,user_desc,user_type,user_area,full_address,phone)
+        VALUE
+        (#{userName},#{userPassword},#{userDesc},#{userType},#{userArea},#{fullAddress},#{phone})
+    </insert>
+
+</mapper>
