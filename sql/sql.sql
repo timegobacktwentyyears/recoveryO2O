@@ -1,4 +1,6 @@
 
+-- 可能由于服务器的mysql版本不支持gmt_create/gmt_modified 的default值  所以insert的时候注意了
+
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
 `id` int(11) NOT NULL AUTO_INCREMENT,
