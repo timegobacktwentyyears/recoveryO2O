@@ -18,7 +18,7 @@ public class User extends BaseEntity{
     /**
      * 用户地址
      */
-    private Integer userArea;
+    private Integer userAddress;
     /**
      * 详细地址
      */
@@ -64,12 +64,12 @@ public class User extends BaseEntity{
         this.userType = userType;
     }
 
-    public Integer getUserArea() {
-        return userArea;
+    public Integer getUserAddress() {
+        return userAddress;
     }
 
-    public void setUserArea(Integer userArea) {
-        this.userArea = userArea;
+    public void setUserAddress(Integer userAddress) {
+        this.userAddress = userAddress;
     }
 
     public Integer getStatus() {
@@ -86,5 +86,13 @@ public class User extends BaseEntity{
 
     public void setUserPassword(String userPassword) {
         this.userPassword = userPassword;
+    }
+
+    public String getFullAddress() {
+        return fullAddress;
+    }
+
+    public void setFullAddress(String fullAddress) {
+        this.fullAddress = fullAddress;
     }
 }

@@ -18,9 +18,9 @@
 
     <insert id="insert" parameterType="User" useGeneratedKeys="true" keyProperty="id">
         insert into user
-        (user_name,user_password,user_desc,user_type,user_area,full_address,phone)
+        (user_name,user_password,user_desc,user_type,user_address,full_address,phone)
         VALUE
-        (#{userName},#{userPassword},#{userDesc},#{userType},#{userArea},#{fullAddress},#{phone})
+        (#{userName},#{userPassword},#{userDesc},#{userType},#{userAddress},#{fullAddress},#{phone})
     </insert>
 
 </mapper>

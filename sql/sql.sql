@@ -3,10 +3,11 @@ DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
 `id` int(11) NOT NULL AUTO_INCREMENT,
 `user_name` varchar(256) NOT NULL COMMENT '用户名称',
+`nick_name` varchar(256) NOT NULL COMMENT '用户昵称',
 `user_password` varchar(256) NOT NULL COMMENT '用户密码',
 `user_desc` varchar(256)  NOT NULL COMMENT '用户简介',
 `user_type` tinyint(1)  NOT NULL COMMENT '用户类型：0 社区用户，1 回收员，2 管理员',
-`user_area` int(11)  NOT NULL COMMENT '用户地址',
+`user_address` int(11)  NOT NULL COMMENT '用户地址',
 `full_address` varchar(256) DEFAULT NOT NULL COMMENT '详细地址',
 `phone` int(11)  NOT NULL COMMENT '电话',
 `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '用户状态0：正常，1：禁用',
@@ -16,6 +17,18 @@ CREATE TABLE `user` (
 PRIMARY KEY (`id`),
 UNIQUE KEY `idx_tenant_name` (`user_name`(128))
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 comment="用户表";
+
+DROP TABLE IF EXISTS `address`;
+CREATE TABLE `address` (
+`id` int(11) NOT NULL AUTO_INCREMENT,
+`user_id` int(11) NOT NULL COMMENT '用户id',
+`area_id` int(11)  NOT NULL COMMENT '地址id',
+`full_address` varchar(256) DEFAULT NOT NULL COMMENT '详细地址',
+`gmt_create` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP  COMMENT '新增时间',
+`gmt_modified` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP  COMMENT '修改时间',
+`is_deleted` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0正常 1逻辑删除',
+PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='地址表';
 
 DROP TABLE IF EXISTS `area`;
 CREATE TABLE `area` (
@@ -28,6 +41,7 @@ CREATE TABLE `area` (
 `is_deleted` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0正常 1逻辑删除',
 PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='地址表';
+
 DROP TABLE IF EXISTS `role`;
 CREATE TABLE `role` (
 
@@ -46,10 +60,25 @@ DROP TABLE IF EXISTS `order`;
 CREATE TABLE `order` (
 `id` int(11) NOT NULL AUTO_INCREMENT,
 `user_id`  int(11) NOT NULL COMMENT '用户id',
-`order_desc` varchar(256) NOT NULL COMMENT '订单信息',
+`order_type` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单类型 0:回收订单  1：二手交易订单 2：爱心捐赠订单',
+`order_desc` varchar(256) COMMENT '订单信息',
+`payment` varchar(64) NOT NULL COMMENT '精确到2位小数；单位：元。如：200.09，表示：200元7分',
+`payment_type` tinyint(1) NOT NULL DEFAULT '1' COMMENT '支付类型 1、在线支付，2、货到付款',
+`post_fee` varchar(64) NOT NULL COMMENT '邮费。精确到2位小数；单位：元。如：200.09',
+`status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '状态：1、未付款2、已付款3、未发货4、已发货5、交易成功6、交易关闭',
+
 `money` double  NOT NULL COMMENT '订单金额',
 `receiverinfo`  varchar(256) NOT NULL DEFAULT '1' COMMENT '接收信息',
 `pay_state` tinyint(1) NOT NULL DEFAULT '0' COMMENT '支付状态',
+`payment_time` datetime COMMENT '付款时间',
+`consign_time` datetime COMMENT '发货时间',
+`end_time` datetime COMMENT '交易完成时间',
+`close_time` datetime COMMENT '交易的关闭时间',
+`shipping_name` varchar(128)  COMMENT '快递名称',
+`shipping_code` varchar(128)  COMMENT '物流单号',
+`buyer_message` varchar(256)  COMMENT '买家留言',
+`buyer_nick` varchar(256)  COMMENT '买家昵称',
+`buyer_rate` tinyint(1) NOT NULL DEFAULT '0' COMMENT '买家是否评价',
 `gmt_create` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP  COMMENT '新增时间',
 `gmt_modified` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP  COMMENT '修改时间',
 `is_deleted` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0正常 1逻辑删除',
