@@ -8,7 +8,7 @@ CREATE TABLE `user` (
 `user_desc` varchar(256)  NOT NULL COMMENT '用户简介',
 `user_type` tinyint(1)  NOT NULL COMMENT '用户类型：0 社区用户，1 回收员，2 管理员',
 `user_address` int(11)  NOT NULL COMMENT '用户地址',
-`full_address` varchar(256) DEFAULT NOT NULL COMMENT '详细地址',
+`full_address` varchar(256) NOT NULL COMMENT '详细地址',
 `phone` int(11)  NOT NULL COMMENT '电话',
 `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '用户状态0：正常，1：禁用',
 `gmt_create` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP  COMMENT '新增时间',
@@ -23,7 +23,7 @@ CREATE TABLE `address` (
 `id` int(11) NOT NULL AUTO_INCREMENT,
 `user_id` int(11) NOT NULL COMMENT '用户id',
 `area_id` int(11)  NOT NULL COMMENT '地址id',
-`full_address` varchar(256) DEFAULT NOT NULL COMMENT '详细地址',
+`full_address` varchar(256) NOT NULL COMMENT '详细地址',
 `gmt_create` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP  COMMENT '新增时间',
 `gmt_modified` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP  COMMENT '修改时间',
 `is_deleted` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0正常 1逻辑删除',
@@ -44,7 +44,6 @@ PRIMARY KEY (`id`)
 
 DROP TABLE IF EXISTS `role`;
 CREATE TABLE `role` (
-
 `id` int(11) NOT NULL AUTO_INCREMENT,
 `role_name` varchar(256) NOT NULL COMMENT '角色名称',
 `role_type` tinyint(1) NOT NULL DEFAULT '1' COMMENT '角色类型：1：功能权限',
@@ -66,7 +65,6 @@ CREATE TABLE `order` (
 `payment_type` tinyint(1) NOT NULL DEFAULT '1' COMMENT '支付类型 1、在线支付，2、货到付款',
 `post_fee` varchar(64) NOT NULL COMMENT '邮费。精确到2位小数；单位：元。如：200.09',
 `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '状态：1、未付款2、已付款3、未发货4、已发货5、交易成功6、交易关闭',
-
 `money` double  NOT NULL COMMENT '订单金额',
 `receiverinfo`  varchar(256) NOT NULL DEFAULT '1' COMMENT '接收信息',
 `pay_state` tinyint(1) NOT NULL DEFAULT '0' COMMENT '支付状态',
@@ -101,7 +99,6 @@ PRIMARY KEY (`id`)
 
 DROP TABLE IF EXISTS ` sort`;
 CREATE TABLE `sort` (
-
 `id` int(11) NOT NULL AUTO_INCREMENT,
 `name`  varchar (256) NOT NULL COMMENT '分类名',
 `sort_desc` varchar(256) NOT NULL COMMENT '详细信息',
