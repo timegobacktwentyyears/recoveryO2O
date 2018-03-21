@@ -65,6 +65,38 @@ public class Order extends BaseEntity {
      * //买家是否评价
      */
     private Integer buyerRate;
+    /**
+     * 废物名称
+     */
+    private String articleName;
+    /**
+     * 废物数量
+     */
+    private Double articleNum;
+
+    public Integer getOrderType() {
+        return orderType;
+    }
+
+    public void setOrderType(Integer orderType) {
+        this.orderType = orderType;
+    }
+
+    public String getArticleName() {
+        return articleName;
+    }
+
+    public void setArticleName(String articleName) {
+        this.articleName = articleName;
+    }
+
+    public Double getArticleNum() {
+        return articleNum;
+    }
+
+    public void setArticleNum(Double articleNum) {
+        this.articleNum = articleNum;
+    }
 
     public Long getUserId() {
         return userId;

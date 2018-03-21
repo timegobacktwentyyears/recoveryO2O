@@ -8,4 +8,12 @@
         order by gmt_create desc
     </select>
 
+    <insert id="insert" parameterType="User" useGeneratedKeys="true" keyProperty="id">
+        insert into order
+        (user_id,order_type,order_desc,payment,payment_type,post_fee,
+        buyer_message,buyer_nick,gmt_create,gmt_modified,article_name,article_num)
+        VALUES
+        (#{userId},#{orderType},#{orderDesc},#{payment},#{paymentType},'',
+        #{buyerMessage},#{buyerNick},now(),now(),#{articleName},#{articleNum})
+    </insert>
 </mapper>

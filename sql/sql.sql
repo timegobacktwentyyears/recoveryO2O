@@ -79,6 +79,8 @@ CREATE TABLE `order` (
 `buyer_message` varchar(256)  COMMENT '买家留言',
 `buyer_nick` varchar(256)  COMMENT '买家昵称',
 `buyer_rate` tinyint(1) NOT NULL DEFAULT '0' COMMENT '买家是否评价',
+`article_name` varchar(256)  COMMENT '废物名称',
+`article_num` double()  COMMENT '废物数量',
 `gmt_create` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP  COMMENT '新增时间',
 `gmt_modified` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP  COMMENT '修改时间',
 `is_deleted` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0正常 1逻辑删除',

@@ -6,6 +6,8 @@ package com.recover.entity;
 public class User extends BaseEntity{
     private String userName;
 
+    private String nickName;
+
     private String userPassword;
     /**
      * 用户简介
@@ -31,6 +33,14 @@ public class User extends BaseEntity{
      * '用户状态0：正常，1：禁用'
      */
     private Integer status;
+
+    public String getNickName() {
+        return nickName;
+    }
+
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
+    }
 
     public Long getPhone() {
         return phone;

@@ -18,9 +18,12 @@
 
     <insert id="insert" parameterType="User" useGeneratedKeys="true" keyProperty="id">
         insert into user
-        (user_name,user_password,user_desc,user_type,user_address,full_address,phone)
+        (user_name,nick_name,user_password,user_desc,user_type,user_address,full_address,phone)
         VALUE
-        (#{userName},#{userPassword},#{userDesc},#{userType},#{userAddress},#{fullAddress},#{phone})
+        (#{userName},#{nickName},#{userPassword},#{userDesc},#{userType},#{userAddress},#{fullAddress},#{phone})
     </insert>
 
+    <select id="getOne" resultType="User">
+        SELECT * from user where id = #{id} and is_deleted = 0
+    </select>
 </mapper>

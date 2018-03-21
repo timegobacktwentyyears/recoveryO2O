@@ -11,4 +11,6 @@ import org.springframework.stereotype.Repository;
 public interface OrderDao {
 
     List<Order> listByuserId(Long userId);
+
+    Integer insert(Order order);
 }
