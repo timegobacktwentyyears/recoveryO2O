@@ -47,7 +47,7 @@ public class UserService {
         java.util.List<Object> paramList = new ArrayList<>();
         paramList.add(user.getPhone());
         paramList.add(user.getStatus());
-        paramList.add(user.getUserArea());
+        //paramList.add(user.getUserArea());
         paramList.add(user.getUserDesc());
         paramList.add(user.getUserName());
         paramList.add(user.getUserPassword());

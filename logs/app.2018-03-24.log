@@ -1,0 +1,548 @@
+[2018-03-24 16:02:06.912][INFO]com.recover.App:48 Starting App on DESKTOP-31OV019 with PID 7364 (C:\Users\acer\workspace\18Workspace\recoveryO2O\second-recover\target\classes started by acer in C:\Users\acer\workspace\18Workspace\recoveryO2O)
+[2018-03-24 16:02:06.918][INFO]com.recover.App:661 No active profile set, falling back to default profiles: default
+[2018-03-24 16:02:07.419][INFO]org.hibernate.validator.internal.util.Version:30 HV000001: Hibernate Validator 5.2.4.Final
+[2018-03-24 16:02:07.672][INFO]org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:582 Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Sat Mar 24 16:02:07 CST 2018]; root of context hierarchy
+[2018-03-24 16:02:11.302][INFO]org.springframework.data.repository.config.RepositoryConfigurationDelegate:170 Multiple Spring Data modules found, entering strict repository configuration mode!
+[2018-03-24 16:02:11.739][WARN]org.mybatis.spring.mapper.ClassPathMapperScanner:167 No MyBatis mapper was found in '[com.recover.mapper]' package. Please check your configuration.
+[2018-03-24 16:02:11.740][WARN]org.springframework.context.annotation.ConfigurationClassPostProcessor:373 Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+[2018-03-24 16:02:12.441][INFO]org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Tomcat' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Tomcat] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-03-24 16:02:12.795][INFO]org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-03-24 16:02:12.843][WARN]org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550 Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'embeddedServletContainerCustomizerBeanPostProcessor': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'myBatisConfig': Unsatisfied dependency expressed through field 'dataSource'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Tomcat.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.tomcat.jdbc.pool.DataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Cannot determine embedded database driver class for database type NONE. If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (no profiles are currently active).
+[2018-03-24 16:02:12.847][ERROR]org.springframework.beans.factory.support.DefaultListableBeanFactory:581 Destroy method on bean with name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor' threw an exception
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Sat Mar 24 16:02:07 CST 2018]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:959)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:966)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:555)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.recover.App.main(App.java:19)
+[2018-03-24 16:02:12.848][ERROR]org.springframework.beans.factory.support.DefaultListableBeanFactory:581 Destroy method on bean with name 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory' threw an exception
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Sat Mar 24 16:02:07 CST 2018]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:959)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:966)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:555)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.recover.App.main(App.java:19)
+[2018-03-24 16:02:12.859][ERROR]org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter:42 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Cannot determine embedded database driver class for database type NONE
+
+Action:
+
+If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (no profiles are currently active).
+
+[2018-03-24 16:04:19.735][INFO]com.recover.App:48 Starting App on DESKTOP-31OV019 with PID 6036 (C:\Users\acer\workspace\18Workspace\recoveryO2O\second-recover\target\classes started by acer in C:\Users\acer\workspace\18Workspace\recoveryO2O)
+[2018-03-24 16:04:19.746][INFO]com.recover.App:661 No active profile set, falling back to default profiles: default
+[2018-03-24 16:04:20.235][INFO]org.hibernate.validator.internal.util.Version:30 HV000001: Hibernate Validator 5.2.4.Final
+[2018-03-24 16:04:20.508][INFO]org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:582 Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Sat Mar 24 16:04:20 CST 2018]; root of context hierarchy
+[2018-03-24 16:04:24.203][INFO]org.springframework.data.repository.config.RepositoryConfigurationDelegate:170 Multiple Spring Data modules found, entering strict repository configuration mode!
+[2018-03-24 16:04:24.677][WARN]org.mybatis.spring.mapper.ClassPathMapperScanner:167 No MyBatis mapper was found in '[com.recover.mapper]' package. Please check your configuration.
+[2018-03-24 16:04:24.679][WARN]org.springframework.context.annotation.ConfigurationClassPostProcessor:373 Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+[2018-03-24 16:04:25.397][INFO]org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Tomcat' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Tomcat] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-03-24 16:04:25.697][INFO]org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-03-24 16:04:25.700][WARN]org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550 Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'embeddedServletContainerCustomizerBeanPostProcessor': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'myBatisConfig': Unsatisfied dependency expressed through field 'dataSource'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Tomcat.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.tomcat.jdbc.pool.DataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Cannot determine embedded database driver class for database type NONE. If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (no profiles are currently active).
+[2018-03-24 16:04:25.703][ERROR]org.springframework.beans.factory.support.DefaultListableBeanFactory:581 Destroy method on bean with name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor' threw an exception
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Sat Mar 24 16:04:20 CST 2018]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:959)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:966)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:555)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.recover.App.main(App.java:19)
+[2018-03-24 16:04:25.704][ERROR]org.springframework.beans.factory.support.DefaultListableBeanFactory:581 Destroy method on bean with name 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory' threw an exception
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Sat Mar 24 16:04:20 CST 2018]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:959)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:966)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:555)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.recover.App.main(App.java:19)
+[2018-03-24 16:04:25.719][ERROR]org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter:42 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Cannot determine embedded database driver class for database type NONE
+
+Action:
+
+If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (no profiles are currently active).
+
+[2018-03-24 16:05:14.038][INFO]com.recover.App:48 Starting App on DESKTOP-31OV019 with PID 7456 (C:\Users\acer\workspace\18Workspace\recoveryO2O\second-recover\target\classes started by acer in C:\Users\acer\workspace\18Workspace\recoveryO2O)
+[2018-03-24 16:05:14.048][INFO]com.recover.App:661 No active profile set, falling back to default profiles: default
+[2018-03-24 16:05:14.692][INFO]org.hibernate.validator.internal.util.Version:30 HV000001: Hibernate Validator 5.2.4.Final
+[2018-03-24 16:05:14.857][INFO]org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:582 Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Sat Mar 24 16:05:14 CST 2018]; root of context hierarchy
+[2018-03-24 16:05:18.263][INFO]org.springframework.data.repository.config.RepositoryConfigurationDelegate:170 Multiple Spring Data modules found, entering strict repository configuration mode!
+[2018-03-24 16:05:18.744][WARN]org.mybatis.spring.mapper.ClassPathMapperScanner:167 No MyBatis mapper was found in '[com.recover.mapper]' package. Please check your configuration.
+[2018-03-24 16:05:18.746][WARN]org.springframework.context.annotation.ConfigurationClassPostProcessor:373 Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+[2018-03-24 16:05:19.526][INFO]org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Tomcat' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Tomcat] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-03-24 16:05:19.823][INFO]org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-03-24 16:05:19.827][WARN]org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550 Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'embeddedServletContainerCustomizerBeanPostProcessor': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'myBatisConfig': Unsatisfied dependency expressed through field 'dataSource'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Tomcat.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.tomcat.jdbc.pool.DataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Cannot determine embedded database driver class for database type NONE. If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (no profiles are currently active).
+[2018-03-24 16:05:19.831][ERROR]org.springframework.beans.factory.support.DefaultListableBeanFactory:581 Destroy method on bean with name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor' threw an exception
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Sat Mar 24 16:05:14 CST 2018]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:959)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:966)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:555)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.recover.App.main(App.java:19)
+[2018-03-24 16:05:19.833][ERROR]org.springframework.beans.factory.support.DefaultListableBeanFactory:581 Destroy method on bean with name 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory' threw an exception
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Sat Mar 24 16:05:14 CST 2018]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:959)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:966)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:555)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.recover.App.main(App.java:19)
+[2018-03-24 16:05:19.847][ERROR]org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter:42 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Cannot determine embedded database driver class for database type NONE
+
+Action:
+
+If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (no profiles are currently active).
+
+[2018-03-24 16:07:56.665][INFO]com.recover.App:48 Starting App on DESKTOP-31OV019 with PID 1808 (C:\Users\acer\workspace\18Workspace\recoveryO2O\second-recover\target\classes started by acer in C:\Users\acer\workspace\18Workspace\recoveryO2O)
+[2018-03-24 16:07:56.674][INFO]com.recover.App:661 No active profile set, falling back to default profiles: default
+[2018-03-24 16:07:57.195][INFO]org.hibernate.validator.internal.util.Version:30 HV000001: Hibernate Validator 5.2.4.Final
+[2018-03-24 16:07:57.434][INFO]org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:582 Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Sat Mar 24 16:07:57 CST 2018]; root of context hierarchy
+[2018-03-24 16:08:00.622][INFO]org.springframework.data.repository.config.RepositoryConfigurationDelegate:170 Multiple Spring Data modules found, entering strict repository configuration mode!
+[2018-03-24 16:08:01.098][WARN]org.mybatis.spring.mapper.ClassPathMapperScanner:167 No MyBatis mapper was found in '[com.recover.mapper]' package. Please check your configuration.
+[2018-03-24 16:08:01.100][WARN]org.springframework.context.annotation.ConfigurationClassPostProcessor:373 Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+[2018-03-24 16:08:01.825][INFO]org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Generic' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Generic] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-03-24 16:08:02.236][INFO]org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-03-24 16:08:02.364][INFO]org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 Bean 'dataSource' of type [class com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-03-24 16:08:02.385][INFO]org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$bcec0162] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-03-24 16:08:02.429][INFO]org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 Bean 'dataSourceInitializer' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-03-24 16:08:02.431][INFO]org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 Bean 'myBatisConfig' of type [class com.recover.common.MyBatisConfig$$EnhancerBySpringCGLIB$$2c513910] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-03-24 16:08:02.475][INFO]org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 Bean 'annotationDrivenTransactionManager' of type [class org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-03-24 16:08:02.477][INFO]org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$daf85e02] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-03-24 16:08:03.459][INFO]org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:87 Tomcat initialized with port(s): 7777 (http)
+[2018-03-24 16:08:03.483][INFO]org.apache.catalina.core.StandardService:179 Starting service Tomcat
+[2018-03-24 16:08:03.486][INFO]org.apache.catalina.core.StandardEngine:179 Starting Servlet Engine: Apache Tomcat/8.5.6
+[2018-03-24 16:08:03.756][INFO]org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:179 Initializing Spring embedded WebApplicationContext
+[2018-03-24 16:08:03.757][INFO]org.springframework.web.context.ContextLoader:276 Root WebApplicationContext: initialization completed in 6323 ms
+[2018-03-24 16:08:04.059][INFO]org.springframework.boot.web.servlet.ServletRegistrationBean:190 Mapping servlet: 'dispatcherServlet' to [/]
+[2018-03-24 16:08:04.068][INFO]org.springframework.boot.web.servlet.FilterRegistrationBean:258 Mapping filter: 'characterEncodingFilter' to: [/*]
+[2018-03-24 16:08:04.069][INFO]org.springframework.boot.web.servlet.FilterRegistrationBean:258 Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[2018-03-24 16:08:04.071][INFO]org.springframework.boot.web.servlet.FilterRegistrationBean:258 Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[2018-03-24 16:08:04.071][INFO]org.springframework.boot.web.servlet.FilterRegistrationBean:258 Mapping filter: 'requestContextFilter' to: [/*]
+[2018-03-24 16:08:04.071][INFO]org.springframework.boot.web.servlet.FilterRegistrationBean:258 Mapping filter: 'simpleCORSFilter' to: [/*]
+[2018-03-24 16:08:04.311][WARN]org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550 Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'addressService': Unsatisfied dependency expressed through field 'userDao'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.recover.dao.UserDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+[2018-03-24 16:08:04.316][INFO]org.apache.catalina.core.StandardService:179 Stopping service Tomcat
+[2018-03-24 16:08:04.399][WARN]org.apache.catalina.loader.WebappClassLoaderBase:179 The web application [ROOT] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:43)
+[2018-03-24 16:08:04.441][INFO]org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer:101 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+[2018-03-24 16:08:04.657][ERROR]org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter:42 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userDao in com.recover.service.AddressService required a bean of type 'com.recover.dao.UserDao' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.recover.dao.UserDao' in your configuration.
+
+[2018-03-24 16:13:41.503][INFO]com.recover.App:48 Starting App on DESKTOP-31OV019 with PID 6088 (C:\Users\acer\workspace\18Workspace\recoveryO2O\second-recover\target\classes started by acer in C:\Users\acer\workspace\18Workspace\recoveryO2O)
+[2018-03-24 16:13:41.553][INFO]com.recover.App:661 No active profile set, falling back to default profiles: default
+[2018-03-24 16:13:42.238][INFO]org.hibernate.validator.internal.util.Version:30 HV000001: Hibernate Validator 5.2.4.Final
+[2018-03-24 16:13:42.392][INFO]org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:582 Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Sat Mar 24 16:13:42 CST 2018]; root of context hierarchy
+[2018-03-24 16:13:45.621][INFO]org.springframework.data.repository.config.RepositoryConfigurationDelegate:170 Multiple Spring Data modules found, entering strict repository configuration mode!
+[2018-03-24 16:13:46.137][WARN]org.mybatis.spring.mapper.ClassPathMapperScanner:167 No MyBatis mapper was found in '[com.recover.mapper]' package. Please check your configuration.
+[2018-03-24 16:13:46.139][WARN]org.springframework.context.annotation.ConfigurationClassPostProcessor:373 Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+[2018-03-24 16:13:46.923][INFO]org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Tomcat' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Tomcat] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-03-24 16:13:47.289][INFO]org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-03-24 16:13:47.293][WARN]org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550 Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'embeddedServletContainerCustomizerBeanPostProcessor': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'myBatisConfig': Unsatisfied dependency expressed through field 'dataSource'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Tomcat.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.tomcat.jdbc.pool.DataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Cannot determine embedded database driver class for database type NONE. If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (no profiles are currently active).
+[2018-03-24 16:13:47.297][ERROR]org.springframework.beans.factory.support.DefaultListableBeanFactory:581 Destroy method on bean with name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor' threw an exception
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Sat Mar 24 16:13:42 CST 2018]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:959)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:966)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:555)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.recover.App.main(App.java:23)
+[2018-03-24 16:13:47.298][ERROR]org.springframework.beans.factory.support.DefaultListableBeanFactory:581 Destroy method on bean with name 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory' threw an exception
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Sat Mar 24 16:13:42 CST 2018]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:959)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:966)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:555)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.recover.App.main(App.java:23)
+[2018-03-24 16:13:47.313][ERROR]org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter:42 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Cannot determine embedded database driver class for database type NONE
+
+Action:
+
+If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (no profiles are currently active).
+
+[2018-03-24 18:09:17.353][INFO]com.recover.App:48 Starting App on DESKTOP-31OV019 with PID 10028 (C:\Users\acer\workspace\18Workspace\recoveryO2O\second-recover\target\classes started by acer in C:\Users\acer\workspace\18Workspace\recoveryO2O)
+[2018-03-24 18:09:17.359][INFO]com.recover.App:661 No active profile set, falling back to default profiles: default
+[2018-03-24 18:09:17.983][INFO]org.hibernate.validator.internal.util.Version:30 HV000001: Hibernate Validator 5.2.4.Final
+[2018-03-24 18:09:18.278][INFO]org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:582 Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Sat Mar 24 18:09:18 CST 2018]; root of context hierarchy
+[2018-03-24 18:09:21.808][INFO]org.springframework.data.repository.config.RepositoryConfigurationDelegate:170 Multiple Spring Data modules found, entering strict repository configuration mode!
+[2018-03-24 18:09:22.336][WARN]org.mybatis.spring.mapper.ClassPathMapperScanner:167 No MyBatis mapper was found in '[com.recover.mapper]' package. Please check your configuration.
+[2018-03-24 18:09:22.338][WARN]org.springframework.context.annotation.ConfigurationClassPostProcessor:373 Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+[2018-03-24 18:09:23.132][WARN]org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550 Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'embeddedServletContainerCustomizerBeanPostProcessor': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'myBatisConfig': Unsatisfied dependency expressed through field 'dataSource'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'javax.sql.DataSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+[2018-03-24 18:09:23.137][ERROR]org.springframework.beans.factory.support.DefaultListableBeanFactory:581 Destroy method on bean with name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor' threw an exception
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Sat Mar 24 18:09:18 CST 2018]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:959)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:966)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:555)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.recover.App.main(App.java:23)
+[2018-03-24 18:09:23.138][ERROR]org.springframework.beans.factory.support.DefaultListableBeanFactory:581 Destroy method on bean with name 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory' threw an exception
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Sat Mar 24 18:09:18 CST 2018]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:959)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:966)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:555)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.recover.App.main(App.java:23)
+[2018-03-24 18:09:23.561][ERROR]org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter:42 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field dataSource in com.recover.common.MyBatisConfig required a bean of type 'javax.sql.DataSource' that could not be found.
+	- Bean method 'dataSource' not loaded because @ConditionalOnProperty (spring.datasource.jndi-name) did not find property 'jndi-name'
+	- Bean method 'dataSource' not loaded because @ConditionalOnBean (types: org.springframework.boot.jta.XADataSourceWrapper; SearchStrategy: all) did not find any beans
+
+
+Action:
+
+Consider revisiting the conditions above or defining a bean of type 'javax.sql.DataSource' in your configuration.
+
+[2018-03-24 18:17:26.641][INFO]com.recover.App:48 Starting App on DESKTOP-31OV019 with PID 2684 (C:\Users\acer\workspace\18Workspace\recoveryO2O\second-recover\target\classes started by acer in C:\Users\acer\workspace\18Workspace\recoveryO2O)
+[2018-03-24 18:17:26.650][INFO]com.recover.App:661 No active profile set, falling back to default profiles: default
+[2018-03-24 18:17:27.285][INFO]org.hibernate.validator.internal.util.Version:30 HV000001: Hibernate Validator 5.2.4.Final
+[2018-03-24 18:17:27.572][INFO]org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:582 Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Sat Mar 24 18:17:27 CST 2018]; root of context hierarchy
+[2018-03-24 18:17:30.302][INFO]org.springframework.data.repository.config.RepositoryConfigurationDelegate:170 Multiple Spring Data modules found, entering strict repository configuration mode!
+[2018-03-24 18:17:30.784][WARN]org.mybatis.spring.mapper.ClassPathMapperScanner:167 No MyBatis mapper was found in '[com.recover.mapper]' package. Please check your configuration.
+[2018-03-24 18:17:30.786][WARN]org.springframework.context.annotation.ConfigurationClassPostProcessor:373 Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+[2018-03-24 18:17:31.550][INFO]org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Tomcat' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Tomcat] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-03-24 18:17:31.933][INFO]org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-03-24 18:17:31.938][WARN]org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550 Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'embeddedServletContainerCustomizerBeanPostProcessor': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'myBatisConfig': Unsatisfied dependency expressed through field 'dataSource'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Tomcat.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.tomcat.jdbc.pool.DataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Cannot determine embedded database driver class for database type NONE. If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (no profiles are currently active).
+[2018-03-24 18:17:31.942][ERROR]org.springframework.beans.factory.support.DefaultListableBeanFactory:581 Destroy method on bean with name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor' threw an exception
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Sat Mar 24 18:17:27 CST 2018]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:959)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:966)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:555)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.recover.App.main(App.java:23)
+[2018-03-24 18:17:31.946][ERROR]org.springframework.beans.factory.support.DefaultListableBeanFactory:581 Destroy method on bean with name 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory' threw an exception
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Sat Mar 24 18:17:27 CST 2018]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:959)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:966)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:555)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.recover.App.main(App.java:23)
+[2018-03-24 18:17:31.967][ERROR]org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter:42 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Cannot determine embedded database driver class for database type NONE
+
+Action:
+
+If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (no profiles are currently active).
+
+[2018-03-24 18:23:07.711][INFO]com.recover.App:48 Starting App on DESKTOP-31OV019 with PID 6080 (C:\Users\acer\workspace\18Workspace\recoveryO2O\second-recover\target\classes started by acer in C:\Users\acer\workspace\18Workspace\recoveryO2O)
+[2018-03-24 18:23:07.717][INFO]com.recover.App:661 No active profile set, falling back to default profiles: default
+[2018-03-24 18:23:08.247][INFO]org.hibernate.validator.internal.util.Version:30 HV000001: Hibernate Validator 5.2.4.Final
+[2018-03-24 18:23:08.448][INFO]org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:582 Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Sat Mar 24 18:23:08 CST 2018]; root of context hierarchy
+[2018-03-24 18:23:11.148][INFO]org.springframework.data.repository.config.RepositoryConfigurationDelegate:170 Multiple Spring Data modules found, entering strict repository configuration mode!
+[2018-03-24 18:23:11.565][WARN]org.mybatis.spring.mapper.ClassPathMapperScanner:167 No MyBatis mapper was found in '[com.recover.mapper]' package. Please check your configuration.
+[2018-03-24 18:23:11.566][WARN]org.springframework.context.annotation.ConfigurationClassPostProcessor:373 Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+[2018-03-24 18:23:12.380][INFO]org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Tomcat' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Tomcat] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-03-24 18:23:12.719][INFO]org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:325 Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2018-03-24 18:23:12.725][WARN]org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550 Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'embeddedServletContainerCustomizerBeanPostProcessor': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'myBatisConfig': Unsatisfied dependency expressed through field 'dataSource'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Tomcat.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.tomcat.jdbc.pool.DataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Cannot determine embedded database driver class for database type NONE. If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (no profiles are currently active).
+[2018-03-24 18:23:12.730][ERROR]org.springframework.beans.factory.support.DefaultListableBeanFactory:581 Destroy method on bean with name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor' threw an exception
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Sat Mar 24 18:23:08 CST 2018]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:959)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:966)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:555)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.recover.App.main(App.java:23)
+[2018-03-24 18:23:12.732][ERROR]org.springframework.beans.factory.support.DefaultListableBeanFactory:581 Destroy method on bean with name 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory' threw an exception
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Sat Mar 24 18:23:08 CST 2018]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:959)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:966)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:555)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.recover.App.main(App.java:23)
+[2018-03-24 18:23:12.748][ERROR]org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter:42 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Cannot determine embedded database driver class for database type NONE
+
+Action:
+
+If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (no profiles are currently active).
+
+[2018-03-24 18:24:12.649][INFO]com.recover.App:48 Starting App on DESKTOP-31OV019 with PID 11488 (C:\Users\acer\workspace\18Workspace\recoveryO2O\second-recover\target\classes started by acer in C:\Users\acer\workspace\18Workspace\recoveryO2O)
+[2018-03-24 18:24:12.662][INFO]com.recover.App:661 No active profile set, falling back to default profiles: default
+[2018-03-24 18:24:13.270][INFO]org.hibernate.validator.internal.util.Version:30 HV000001: Hibernate Validator 5.2.4.Final
+[2018-03-24 18:24:13.434][INFO]org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:582 Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Sat Mar 24 18:24:13 CST 2018]; root of context hierarchy
+[2018-03-24 18:24:16.275][INFO]org.springframework.data.repository.config.RepositoryConfigurationDelegate:170 Multiple Spring Data modules found, entering strict repository configuration mode!
+[2018-03-24 18:24:16.749][WARN]org.mybatis.spring.mapper.ClassPathMapperScanner:167 No MyBatis mapper was found in '[com.recover.mapper]' package. Please check your configuration.
+[2018-03-24 18:24:16.751][WARN]org.springframework.context.annotation.ConfigurationClassPostProcessor:373 Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+[2018-03-24 18:24:17.463][WARN]org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:550 Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'embeddedServletContainerCustomizerBeanPostProcessor': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'myBatisConfig': Unsatisfied dependency expressed through field 'dataSource'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'javax.sql.DataSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+[2018-03-24 18:24:17.470][ERROR]org.springframework.beans.factory.support.DefaultListableBeanFactory:581 Destroy method on bean with name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor' threw an exception
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Sat Mar 24 18:24:13 CST 2018]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:959)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:966)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:555)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.recover.App.main(App.java:23)
+[2018-03-24 18:24:17.473][ERROR]org.springframework.beans.factory.support.DefaultListableBeanFactory:581 Destroy method on bean with name 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory' threw an exception
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Sat Mar 24 18:24:13 CST 2018]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:97)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:253)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:959)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:966)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:555)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.recover.App.main(App.java:23)
+[2018-03-24 18:24:17.732][ERROR]org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter:42 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field dataSource in com.recover.common.MyBatisConfig required a bean of type 'javax.sql.DataSource' that could not be found.
+	- Bean method 'dataSource' not loaded because @ConditionalOnProperty (spring.datasource.jndi-name) did not find property 'jndi-name'
+	- Bean method 'dataSource' not loaded because @ConditionalOnBean (types: org.springframework.boot.jta.XADataSourceWrapper; SearchStrategy: all) did not find any beans
+
+
+Action:
+
+Consider revisiting the conditions above or defining a bean of type 'javax.sql.DataSource' in your configuration.
+

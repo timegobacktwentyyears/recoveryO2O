@@ -9,7 +9,7 @@ CREATE TABLE `user` (
 `user_password` varchar(256) NOT NULL COMMENT '用户密码',
 `user_desc` varchar(256)  NOT NULL COMMENT '用户简介',
 `user_type` tinyint(1)  NOT NULL COMMENT '用户类型：0 社区用户，1 回收员，2 管理员',
-`user_address` int(11)  NOT NULL COMMENT '用户地址',
+`user_address` varchar(256) NOT NULL COMMENT '用户地址',
 `full_address` varchar(256) NOT NULL COMMENT '详细地址',
 `phone` int(11)  NOT NULL COMMENT '电话',
 `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '用户状态0：正常，1：禁用',

@@ -18,9 +18,9 @@ public class User extends BaseEntity{
      */
     private Integer userType;
     /**
-     * 用户地址
+     * 用户地址   存储格式 省/市/县
      */
-    private Integer userAddress;
+    private String userAddress;
     /**
      * 详细地址
      */
@@ -74,11 +74,11 @@ public class User extends BaseEntity{
         this.userType = userType;
     }
 
-    public Integer getUserAddress() {
+    public String getUserAddress() {
         return userAddress;
     }
 
-    public void setUserAddress(Integer userAddress) {
+    public void setUserAddress(String userAddress) {
         this.userAddress = userAddress;
     }
 
